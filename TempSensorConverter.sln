@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thremulator", "Thremulator\Thremulator.csproj", "{739DC96B-DD94-4D8C-99F6-28B3F3362970}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{739DC96B-DD94-4D8C-99F6-28B3F3362970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739DC96B-DD94-4D8C-99F6-28B3F3362970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739DC96B-DD94-4D8C-99F6-28B3F3362970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739DC96B-DD94-4D8C-99F6-28B3F3362970}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11185666-EE82-40F4-A5A5-5CBEEA9A808B}
+	EndGlobalSection
+EndGlobal
