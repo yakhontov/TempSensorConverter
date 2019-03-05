@@ -37,7 +37,7 @@ namespace TC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.00")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string TcTemp {
             get {
                 return ((string)(this["TcTemp"]));

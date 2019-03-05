@@ -6,6 +6,12 @@ using System.Text;
 
 namespace TC
 {
+    class TempTB
+    {
+        public object tempTable;
+        public TempTB(object tt) { tempTable = tt; }
+    }
+
     abstract class TempTable
     {
         /// <summary>Максимальная температура в таблице</summary>

@@ -20,14 +20,14 @@ namespace TC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            kTextBox.Tag = new ThermocoupleK();
-            bTextBox.Tag = new ThermocoupleB();
-            eTextBox.Tag = new ThermocoupleE();
-            jTextBox.Tag = new ThermocoupleJ();
-            nTextBox.Tag = new ThermocoupleN();
-            rTextBox.Tag = new ThermocoupleR();
-            sTextBox.Tag = new ThermocoupleS();
-            tTextBox.Tag = new ThermocoupleT();
+            k2TextBox.Tag = k1TextBox.Tag = new ThermocoupleK();
+            b2TextBox.Tag = b1TextBox.Tag = new ThermocoupleB();
+            e2TextBox.Tag = e1TextBox.Tag = new ThermocoupleE();
+            j2TextBox.Tag = j1TextBox.Tag = new ThermocoupleJ();
+            n2TextBox.Tag = n1TextBox.Tag = new ThermocoupleN();
+            r2TextBox.Tag = r1TextBox.Tag = new ThermocoupleR();
+            s2TextBox.Tag = s1TextBox.Tag = new ThermocoupleS();
+            t2TextBox.Tag = t1TextBox.Tag = new ThermocoupleT();
 
             pt1TextBox.Tag = new RtdPt1();
             pt2TextBox.Tag = new RtdPt2();
@@ -35,9 +35,10 @@ namespace TC
             cu2TextBox.Tag = new RtdCu2();
             niTextBox.Tag = new RtdNi();
 
-            TtTextBox_TextChanged(tTextBox, null);
-            tRTextBox_TextChanged(tRTextBox, null);
+            //thermocoupleTempTextBox_TextChanged(tTextBox, null);
+            //tRTextBox_TextChanged(tR6TextBox, null);
 
+            /*
             foreach (TabPage t in tabControl1.TabPages)
                 foreach (Control c in t.Controls)
                     if (c.TabIndex == Properties.Settings.Default.FocusedControl)
@@ -47,45 +48,78 @@ namespace TC
                         c.Select();
                         return;
                     }
+             */
         }
 
-        private void TtTextBox_TextChanged(object sender, EventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            double temp, temc;
-            if (!double.TryParse(tTTextBox.Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out temp))
-                temp = double.NaN;
+            Properties.Settings.Default.FocusedControl = ActiveControl.TabIndex;
+            Properties.Settings.Default.Save();
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////
+        /// Первая вкладка термопар с общей температурой
+        ///////////////////////////////////////////////////////////////////////////////
+        private void thermocoupleTemp1TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!double.TryParse(((TextBox)sender).Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out double temperature))
+                temperature = double.NaN;
 
             foreach(Control c in tabPage1.Controls)
-                if(c is TextBox && c.Tag is TempTable)
+                if (c is TextBox && !c.Focused && c.Tag is TempTable) 
                 {
                     TextBox tb = (TextBox)c;
-                    TempTable tc = (TempTable)tb.Tag;
-                    if (!tb.Focused)
-                    {
-                        temc = tc.GetValbyС(temp);
-                        if(double.IsNaN(temc))
-                            tb.Text = "—";
-                        else
-                            tb.Text = temc.ToString("F3");
-                    }
+                    double temc = ((TempTable)tb.Tag).GetValbyС(temperature);
+                    tb.Text = (double.IsNaN(temc)) ? ("—") : (temc.ToString("F3"));
+                }
+         }
+
+        private void temc1TextBox_TextChanged(object sender, EventArgs e)
+        {
+            TextBox senderBox = (TextBox)sender;
+            if (!senderBox.Focused)
+                return;
+
+            if (!double.TryParse(senderBox.Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out double temc))
+                temc = double.NaN;
+
+            double temperature = ((TempTable)senderBox.Tag).GetTempC(temc);
+            temp1TextBox.Text = (double.IsNaN(temperature)) ? ("—") : (temperature.ToString("F2"));
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////
+        /// Вторая вкладка термопар с общей термоЭДС
+        ///////////////////////////////////////////////////////////////////////////////
+        private void thermocoupleTemp2TextBox_TextChanged(object sender, EventArgs e)
+        {
+            TextBox senderBox = (TextBox)sender;
+            if (!senderBox.Focused)
+                return;
+
+            if (!double.TryParse(senderBox.Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out double temperature))
+                temperature = double.NaN;
+
+            double temc = ((TempTable)senderBox.Tag).GetValbyС(temperature);
+            temc2TextBox.Text = (double.IsNaN(temc)) ? ("—") : (temc.ToString("F3"));
+        }
+
+        private void temc2TextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (!double.TryParse(((TextBox)sender).Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out double temc))
+                temc = double.NaN;
+
+            foreach (Control c in tabPage4.Controls)
+                if (c is TextBox && !c.Focused && c.Tag is TempTable)
+                {
+                    TextBox tb = (TextBox)c;
+                    double temperature = ((TempTable)tb.Tag).GetTempC(temc);
+                    tb.Text = (double.IsNaN(temperature)) ? ("—") : (temperature.ToString("F2"));
                 }
         }
 
-        private void temcTextBox_TextChanged(object sender, EventArgs e)
-        {
-            TextBox tb = (TextBox)sender;
-            if (tb.Focused)
-            {
-                double v, temp;
-                if (!double.TryParse(tb.Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out v))
-                    v = double.NaN;
-                temp = ((TempTable)tb.Tag).GetTempC(v);
-                if (double.IsNaN(temp))
-                    tTTextBox.Text = "—";
-                else
-                    tTTextBox.Text = temp.ToString("F2");
-            }
-        }
+        ///////////////////////////////////////////////////////////////////////////////
+        /// Вкладка термосопротивлений
+        ///////////////////////////////////////////////////////////////////////////////
 
         /// <summary>
         /// Изменение температуры либо сопротивления R0
@@ -93,7 +127,7 @@ namespace TC
         private void tRTextBox_TextChanged(object sender, EventArgs e)
         {
             double temp, R0, R;
-            if (!double.TryParse(tRTextBox.Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out temp))
+            if (!double.TryParse(tR6TextBox.Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out temp))
                 temp = double.NaN;
             if (!double.TryParse(r0TextBox.Text.Replace(".", CultureInfo.CurrentUICulture.NumberFormat.NumberDecimalSeparator), out R0))
                 R0 = double.NaN;
@@ -129,16 +163,10 @@ namespace TC
                     v = double.NaN;
                 temp = ((Rtd)tb.Tag).GetTempC(R0, v);
                 if (double.IsNaN(temp))
-                    tRTextBox.Text = "—";
+                    tR6TextBox.Text = "—";
                 else
-                    tRTextBox.Text = temp.ToString("F2");
+                    tR6TextBox.Text = temp.ToString("F2");
             }
-        }
-
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Properties.Settings.Default.FocusedControl = ActiveControl.TabIndex;
-            Properties.Settings.Default.Save();
         }
     }
 }
