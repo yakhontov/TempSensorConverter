@@ -82,5 +82,53 @@ namespace TC.Properties {
                 this["FocusedControl"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Temc {
+            get {
+                return ((string)(this["Temc"]));
+            }
+            set {
+                this["Temc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public string R0_1 {
+            get {
+                return ((string)(this["R0_1"]));
+            }
+            set {
+                this["R0_1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public string R0_2 {
+            get {
+                return ((string)(this["R0_2"]));
+            }
+            set {
+                this["R0_2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int SelectedTab {
+            get {
+                return ((int)(this["SelectedTab"]));
+            }
+            set {
+                this["SelectedTab"] = value;
+            }
+        }
     }
 }
