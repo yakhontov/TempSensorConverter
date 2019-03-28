@@ -74,7 +74,7 @@ namespace TC
                 {
                     TextBox tb = (TextBox)c;
                     double temc = ((TempTable)tb.Tag).GetValbyС(temperature);
-                    tb.Text = (double.IsNaN(temc)) ? ("—") : (temc.ToString("F3"));
+                    tb.Text = (double.IsNaN(temc)) ? ("—") : (temc.ToString("F3", CultureInfo.InvariantCulture));
                 }
          }
 
@@ -88,7 +88,7 @@ namespace TC
                 temc = double.NaN;
 
             double temperature = ((TempTable)senderBox.Tag).GetTempC(temc);
-            temp1TextBox.Text = (double.IsNaN(temperature)) ? ("—") : (temperature.ToString("F2"));
+            temp1TextBox.Text = (double.IsNaN(temperature)) ? ("—") : (temperature.ToString("F2", CultureInfo.InvariantCulture));
         }
 
         ///////////////////////////////////////////////////////////////////////////////
@@ -104,7 +104,7 @@ namespace TC
                 temperature = double.NaN;
 
             double temc = ((TempTable)senderBox.Tag).GetValbyС(temperature);
-            temc2TextBox.Text = (double.IsNaN(temc)) ? ("—") : (temc.ToString("F3"));
+            temc2TextBox.Text = (double.IsNaN(temc)) ? ("—") : (temc.ToString("F3", CultureInfo.InvariantCulture));
         }
 
         private void temc2TextBox_TextChanged(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace TC
                 {
                     TextBox tb = (TextBox)c;
                     double temperature = ((TempTable)tb.Tag).GetTempC(temc);
-                    tb.Text = (double.IsNaN(temperature)) ? ("—") : (temperature.ToString("F2"));
+                    tb.Text = (double.IsNaN(temperature)) ? ("—") : (temperature.ToString("F2", CultureInfo.InvariantCulture));
                 }
         }
 
@@ -136,7 +136,7 @@ namespace TC
                 {
                     TextBox tb = (TextBox)c;
                     double R = ((Rtd)tb.Tag).GetRbyС(R0, temperature);
-                    tb.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2"));
+                    tb.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2", CultureInfo.InvariantCulture));
                 }
         }
 
@@ -152,7 +152,7 @@ namespace TC
                 U = double.NaN;
 
             double R = ((Rtd)senderBox.Tag).GetTempC(R0, U);
-            temp3TextBox.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2"));
+            temp3TextBox.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2", CultureInfo.InvariantCulture));
         }
 
         ///////////////////////////////////////////////////////////////////////////////
@@ -170,7 +170,7 @@ namespace TC
                 temperature = double.NaN;
 
             double R = ((Rtd)senderBox.Tag).GetRbyС(R0, temperature);
-            res4TextBox.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2"));
+            res4TextBox.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2", CultureInfo.InvariantCulture));
         }
 
         private void r4TextBox_TextChanged(object sender, EventArgs e)
@@ -185,13 +185,8 @@ namespace TC
                 {
                     TextBox tb = (TextBox)c;
                     double R = ((Rtd)tb.Tag).GetTempC(R0, res);
-                    tb.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2"));
+                    tb.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2", CultureInfo.InvariantCulture));
                 }
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("http://radiy.com");
         }
     }
 }

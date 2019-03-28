@@ -104,10 +104,10 @@
             this.label37 = new System.Windows.Forms.Label();
             this.res4TextBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.versionLabel = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.label19 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -321,9 +321,10 @@
             this.tabControl1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedIndex", global::TC.Properties.Settings.Default, "SelectedTab", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = global::TC.Properties.Settings.Default.SelectedTab;
-            this.tabControl1.Size = new System.Drawing.Size(396, 407);
+            this.tabControl1.Size = new System.Drawing.Size(396, 425);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -347,12 +348,12 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.j1TextBox);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 40);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(388, 381);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Thermocouple (temp)";
+            this.tabPage1.Text = "Thermocouple (common temp, °C)";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // temp1TextBox
@@ -391,12 +392,12 @@
             this.tabPage4.Controls.Add(this.label27);
             this.tabPage4.Controls.Add(this.label28);
             this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(388, 381);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Thermocouple (volt)";
+            this.tabPage4.Text = "Thermocouple (common voltage, mV)";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // temc2TextBox
@@ -404,9 +405,9 @@
             this.temc2TextBox.AllowDrop = true;
             this.temc2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::TC.Properties.Settings.Default, "Temc", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.temc2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.temc2TextBox.Location = new System.Drawing.Point(206, 182);
+            this.temc2TextBox.Location = new System.Drawing.Point(8, 182);
             this.temc2TextBox.Name = "temc2TextBox";
-            this.temc2TextBox.Size = new System.Drawing.Size(172, 38);
+            this.temc2TextBox.Size = new System.Drawing.Size(144, 38);
             this.temc2TextBox.TabIndex = 132;
             this.temc2TextBox.Text = global::TC.Properties.Settings.Default.Temc;
             this.temc2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -418,9 +419,9 @@
             // 
             this.t2TextBox.AllowDrop = true;
             this.t2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.t2TextBox.Location = new System.Drawing.Point(8, 333);
+            this.t2TextBox.Location = new System.Drawing.Point(206, 333);
             this.t2TextBox.Name = "t2TextBox";
-            this.t2TextBox.Size = new System.Drawing.Size(144, 38);
+            this.t2TextBox.Size = new System.Drawing.Size(172, 38);
             this.t2TextBox.TabIndex = 112;
             this.t2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.t2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
@@ -431,9 +432,9 @@
             // 
             this.s2TextBox.AllowDrop = true;
             this.s2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.s2TextBox.Location = new System.Drawing.Point(8, 289);
+            this.s2TextBox.Location = new System.Drawing.Point(206, 289);
             this.s2TextBox.Name = "s2TextBox";
-            this.s2TextBox.Size = new System.Drawing.Size(144, 38);
+            this.s2TextBox.Size = new System.Drawing.Size(172, 38);
             this.s2TextBox.TabIndex = 111;
             this.s2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.s2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
@@ -444,9 +445,9 @@
             // 
             this.r2TextBox.AllowDrop = true;
             this.r2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.r2TextBox.Location = new System.Drawing.Point(8, 245);
+            this.r2TextBox.Location = new System.Drawing.Point(206, 245);
             this.r2TextBox.Name = "r2TextBox";
-            this.r2TextBox.Size = new System.Drawing.Size(144, 38);
+            this.r2TextBox.Size = new System.Drawing.Size(172, 38);
             this.r2TextBox.TabIndex = 110;
             this.r2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.r2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
@@ -457,9 +458,9 @@
             // 
             this.n2TextBox.AllowDrop = true;
             this.n2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.n2TextBox.Location = new System.Drawing.Point(8, 201);
+            this.n2TextBox.Location = new System.Drawing.Point(206, 201);
             this.n2TextBox.Name = "n2TextBox";
-            this.n2TextBox.Size = new System.Drawing.Size(144, 38);
+            this.n2TextBox.Size = new System.Drawing.Size(172, 38);
             this.n2TextBox.TabIndex = 109;
             this.n2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.n2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
@@ -470,9 +471,9 @@
             // 
             this.j2TextBox.AllowDrop = true;
             this.j2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.j2TextBox.Location = new System.Drawing.Point(8, 157);
+            this.j2TextBox.Location = new System.Drawing.Point(206, 157);
             this.j2TextBox.Name = "j2TextBox";
-            this.j2TextBox.Size = new System.Drawing.Size(144, 38);
+            this.j2TextBox.Size = new System.Drawing.Size(172, 38);
             this.j2TextBox.TabIndex = 108;
             this.j2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.j2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
@@ -483,9 +484,9 @@
             // 
             this.e2TextBox.AllowDrop = true;
             this.e2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.e2TextBox.Location = new System.Drawing.Point(8, 113);
+            this.e2TextBox.Location = new System.Drawing.Point(206, 113);
             this.e2TextBox.Name = "e2TextBox";
-            this.e2TextBox.Size = new System.Drawing.Size(144, 38);
+            this.e2TextBox.Size = new System.Drawing.Size(172, 38);
             this.e2TextBox.TabIndex = 107;
             this.e2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.e2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
@@ -496,9 +497,9 @@
             // 
             this.b2TextBox.AllowDrop = true;
             this.b2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.b2TextBox.Location = new System.Drawing.Point(8, 69);
+            this.b2TextBox.Location = new System.Drawing.Point(206, 69);
             this.b2TextBox.Name = "b2TextBox";
-            this.b2TextBox.Size = new System.Drawing.Size(144, 38);
+            this.b2TextBox.Size = new System.Drawing.Size(172, 38);
             this.b2TextBox.TabIndex = 106;
             this.b2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.b2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
@@ -508,7 +509,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(8, 9);
+            this.label20.Location = new System.Drawing.Point(206, 9);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(84, 13);
             this.label20.TabIndex = 128;
@@ -528,9 +529,9 @@
             // 
             this.k2TextBox.AllowDrop = true;
             this.k2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.k2TextBox.Location = new System.Drawing.Point(8, 25);
+            this.k2TextBox.Location = new System.Drawing.Point(206, 25);
             this.k2TextBox.Name = "k2TextBox";
-            this.k2TextBox.Size = new System.Drawing.Size(144, 38);
+            this.k2TextBox.Size = new System.Drawing.Size(172, 38);
             this.k2TextBox.TabIndex = 105;
             this.k2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolTip.SetToolTip(this.k2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
@@ -550,7 +551,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(203, 166);
+            this.label23.Location = new System.Drawing.Point(5, 166);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(104, 13);
             this.label23.TabIndex = 130;
@@ -633,12 +634,12 @@
             this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.temp3TextBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(388, 381);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "RTD (temp)";
+            this.tabPage2.Text = "RTD (common temp, °C)";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label18
@@ -647,9 +648,9 @@
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label18.Location = new System.Drawing.Point(6, 298);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(176, 26);
+            this.label18.Size = new System.Drawing.Size(183, 26);
             this.label18.TabIndex = 100;
-            this.label18.Text = "Cu a=4.26e³ °C⁻¹";
+            this.label18.Text = "Cu α=4.26e⁻³ °C⁻¹";
             // 
             // ni3TextBox
             // 
@@ -677,9 +678,9 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.Location = new System.Drawing.Point(8, 342);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(169, 26);
+            this.label14.Size = new System.Drawing.Size(176, 26);
             this.label14.TabIndex = 100;
-            this.label14.Text = "Ni a=6.17e³ °C⁻¹";
+            this.label14.Text = "Ni α=6.17e⁻³ °C⁻¹";
             // 
             // label13
             // 
@@ -687,9 +688,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.Location = new System.Drawing.Point(6, 257);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(176, 26);
+            this.label13.Size = new System.Drawing.Size(183, 26);
             this.label13.TabIndex = 100;
-            this.label13.Text = "Cu a=4.28e³ °C⁻¹";
+            this.label13.Text = "Cu α=4.28e⁻³ °C⁻¹";
             // 
             // label15
             // 
@@ -697,9 +698,9 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label15.Location = new System.Drawing.Point(8, 210);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(169, 26);
+            this.label15.Size = new System.Drawing.Size(176, 26);
             this.label15.TabIndex = 100;
-            this.label15.Text = "Pt a=3.91e³ °C⁻¹";
+            this.label15.Text = "Pt α=3.91e⁻³ °C⁻¹";
             // 
             // cu23TextBox
             // 
@@ -740,9 +741,9 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label16.Location = new System.Drawing.Point(8, 166);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(169, 26);
+            this.label16.Size = new System.Drawing.Size(176, 26);
             this.label16.TabIndex = 100;
-            this.label16.Text = "Pt a=3.85e³ °C⁻¹";
+            this.label16.Text = "Pt α=3.85e⁻³ °C⁻¹";
             // 
             // pt13TextBox
             // 
@@ -816,27 +817,27 @@
             this.tabPage5.Controls.Add(this.label36);
             this.tabPage5.Controls.Add(this.label37);
             this.tabPage5.Controls.Add(this.res4TextBox);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(388, 381);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "RTD (res)";
+            this.tabPage5.Text = "RTD (common resistance, Ohm)";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(184, 298);
+            this.label30.Location = new System.Drawing.Point(6, 298);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(176, 26);
+            this.label30.Size = new System.Drawing.Size(183, 26);
             this.label30.TabIndex = 108;
-            this.label30.Text = "Cu a=4.26e³ °C⁻¹";
+            this.label30.Text = "Cu α=4.26e⁻³ °C⁻¹";
             // 
             // ni4TextBox
             // 
             this.ni4TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ni4TextBox.Location = new System.Drawing.Point(8, 333);
+            this.ni4TextBox.Location = new System.Drawing.Point(206, 333);
             this.ni4TextBox.Name = "ni4TextBox";
             this.ni4TextBox.Size = new System.Drawing.Size(172, 38);
             this.ni4TextBox.TabIndex = 107;
@@ -847,7 +848,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(8, 141);
+            this.label31.Location = new System.Drawing.Point(206, 141);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(84, 13);
             this.label31.TabIndex = 109;
@@ -857,36 +858,36 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(186, 342);
+            this.label32.Location = new System.Drawing.Point(8, 342);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(169, 26);
+            this.label32.Size = new System.Drawing.Size(176, 26);
             this.label32.TabIndex = 110;
-            this.label32.Text = "Ni a=6.17e³ °C⁻¹";
+            this.label32.Text = "Ni α=6.17e⁻³ °C⁻¹";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label33.Location = new System.Drawing.Point(184, 257);
+            this.label33.Location = new System.Drawing.Point(6, 257);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(176, 26);
+            this.label33.Size = new System.Drawing.Size(183, 26);
             this.label33.TabIndex = 111;
-            this.label33.Text = "Cu a=4.28e³ °C⁻¹";
+            this.label33.Text = "Cu α=4.28e⁻³ °C⁻¹";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label34.Location = new System.Drawing.Point(186, 210);
+            this.label34.Location = new System.Drawing.Point(8, 210);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(169, 26);
+            this.label34.Size = new System.Drawing.Size(176, 26);
             this.label34.TabIndex = 112;
-            this.label34.Text = "Pt a=3.91e³ °C⁻¹";
+            this.label34.Text = "Pt α=3.91e⁻³ °C⁻¹";
             // 
             // cu24TextBox
             // 
             this.cu24TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cu24TextBox.Location = new System.Drawing.Point(8, 289);
+            this.cu24TextBox.Location = new System.Drawing.Point(206, 289);
             this.cu24TextBox.Name = "cu24TextBox";
             this.cu24TextBox.Size = new System.Drawing.Size(172, 38);
             this.cu24TextBox.TabIndex = 106;
@@ -897,7 +898,7 @@
             // cu14TextBox
             // 
             this.cu14TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cu14TextBox.Location = new System.Drawing.Point(8, 245);
+            this.cu14TextBox.Location = new System.Drawing.Point(206, 245);
             this.cu14TextBox.Name = "cu14TextBox";
             this.cu14TextBox.Size = new System.Drawing.Size(172, 38);
             this.cu14TextBox.TabIndex = 105;
@@ -908,7 +909,7 @@
             // pt24TextBox
             // 
             this.pt24TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pt24TextBox.Location = new System.Drawing.Point(8, 201);
+            this.pt24TextBox.Location = new System.Drawing.Point(206, 201);
             this.pt24TextBox.Name = "pt24TextBox";
             this.pt24TextBox.Size = new System.Drawing.Size(172, 38);
             this.pt24TextBox.TabIndex = 104;
@@ -920,16 +921,16 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label35.Location = new System.Drawing.Point(186, 166);
+            this.label35.Location = new System.Drawing.Point(8, 166);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(169, 26);
+            this.label35.Size = new System.Drawing.Size(176, 26);
             this.label35.TabIndex = 113;
-            this.label35.Text = "Pt a=3.85e³ °C⁻¹";
+            this.label35.Text = "Pt α=3.85e⁻³ °C⁻¹";
             // 
             // pt14TextBox
             // 
             this.pt14TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pt14TextBox.Location = new System.Drawing.Point(8, 157);
+            this.pt14TextBox.Location = new System.Drawing.Point(206, 157);
             this.pt14TextBox.Name = "pt14TextBox";
             this.pt14TextBox.Size = new System.Drawing.Size(172, 38);
             this.pt14TextBox.TabIndex = 103;
@@ -962,7 +963,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(234, 9);
+            this.label37.Location = new System.Drawing.Point(8, 9);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(88, 13);
             this.label37.TabIndex = 115;
@@ -972,7 +973,7 @@
             // 
             this.res4TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::TC.Properties.Settings.Default, "RtdResistance", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.res4TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.res4TextBox.Location = new System.Drawing.Point(234, 25);
+            this.res4TextBox.Location = new System.Drawing.Point(8, 25);
             this.res4TextBox.Name = "res4TextBox";
             this.res4TextBox.Size = new System.Drawing.Size(144, 38);
             this.res4TextBox.TabIndex = 101;
@@ -983,15 +984,25 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.linkLabel1);
+            this.tabPage3.Controls.Add(this.label19);
             this.tabPage3.Controls.Add(this.versionLabel);
             this.tabPage3.Controls.Add(this.pictureBox2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 40);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(388, 381);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "About";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // versionLabel
+            // 
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.versionLabel.Location = new System.Drawing.Point(8, 352);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(75, 24);
+            this.versionLabel.TabIndex = 1;
+            this.versionLabel.Text = "Version";
             // 
             // pictureBox2
             // 
@@ -1005,33 +1016,21 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // versionLabel
+            // label19
             // 
-            this.versionLabel.AutoSize = true;
-            this.versionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.versionLabel.Location = new System.Drawing.Point(8, 352);
-            this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(75, 24);
-            this.versionLabel.TabIndex = 1;
-            this.versionLabel.Text = "Version";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.Location = new System.Drawing.Point(8, 328);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(110, 24);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "RPC Radics";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(8, 328);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(174, 24);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "© Radics LLC, 2019";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(396, 407);
+            this.ClientSize = new System.Drawing.Size(396, 425);
             this.Controls.Add(this.tabControl1);
             this.DataBindings.Add(new System.Windows.Forms.Binding("Location", global::TC.Properties.Settings.Default, "Location", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1039,7 +1038,7 @@
             this.Location = global::TC.Properties.Settings.Default.Location;
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Thermulator";
+            this.Text = "Thermo converter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
@@ -1135,8 +1134,8 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox res4TextBox;
         private System.Windows.Forms.Label versionLabel;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Label label19;
     }
 }
 

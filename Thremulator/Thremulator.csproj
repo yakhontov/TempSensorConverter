@@ -7,7 +7,7 @@
     <ProjectGuid>{739DC96B-DD94-4D8C-99F6-28B3F3362970}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>TC</RootNamespace>
-    <AssemblyName>Thermulator</AssemblyName>
+    <AssemblyName>ThermoConverter</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
