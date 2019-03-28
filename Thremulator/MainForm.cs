@@ -39,12 +39,26 @@ namespace TC
                     c.Select();
                     break;
                 }
+
+            versionLabel.Text = "Version " + Application.ProductVersion;
+
+            // Программа автоматически сохраняет значения при выходе и загружает при запуске,
+            // но в целях упрощения использования этот функционал отключен и при запуске загружаются дефолтные значения
+            // Если потребуется его включить, нужно закомментировать следующую строку:
+            LoadDefaultValues();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.FocusedControl = ActiveControl.TabIndex;
             Properties.Settings.Default.Save();
+        }
+
+        private void LoadDefaultValues()
+        {
+            System.Drawing.Point location = Properties.Settings.Default.Location;
+            Properties.Settings.Default.Reset();
+            Location = location;
         }
 
         ///////////////////////////////////////////////////////////////////////////////
@@ -173,6 +187,11 @@ namespace TC
                     double R = ((Rtd)tb.Tag).GetTempC(R0, res);
                     tb.Text = (double.IsNaN(R)) ? ("—") : (R.ToString("F2"));
                 }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://radiy.com");
         }
     }
 }

@@ -122,8 +122,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\b9a6dae0c1a2.png" />
-    <None Include="Resources\image.jpg" />
+    <Content Include="Resources\Logo.png" />
     <Content Include="Thermometer.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

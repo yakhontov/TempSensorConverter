@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.k1TextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -103,8 +104,10 @@
             this.label37 = new System.Windows.Forms.Label();
             this.res4TextBox = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label19 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.versionLabel = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -122,6 +125,8 @@
             this.k1TextBox.Size = new System.Drawing.Size(172, 38);
             this.k1TextBox.TabIndex = 11;
             this.k1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.k1TextBox, "Enter seebeck effect value (mV) for this\r\nthermocouple to calculate temperature (" +
+        "°C)");
             this.k1TextBox.TextChanged += new System.EventHandler(this.temc1TextBox_TextChanged);
             // 
             // label1
@@ -150,6 +155,8 @@
             this.b1TextBox.Size = new System.Drawing.Size(172, 38);
             this.b1TextBox.TabIndex = 12;
             this.b1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.b1TextBox, "Enter seebeck effect value (mV) for this\r\nthermocouple to calculate temperature (" +
+        "°C)");
             this.b1TextBox.TextChanged += new System.EventHandler(this.temc1TextBox_TextChanged);
             // 
             // label4
@@ -190,6 +197,8 @@
             this.e1TextBox.Size = new System.Drawing.Size(172, 38);
             this.e1TextBox.TabIndex = 13;
             this.e1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.e1TextBox, "Enter seebeck effect value (mV) for this\r\nthermocouple to calculate temperature (" +
+        "°C)");
             this.e1TextBox.TextChanged += new System.EventHandler(this.temc1TextBox_TextChanged);
             // 
             // label6
@@ -210,6 +219,8 @@
             this.j1TextBox.Size = new System.Drawing.Size(172, 38);
             this.j1TextBox.TabIndex = 14;
             this.j1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.j1TextBox, "Enter seebeck effect value (mV) for this\r\nthermocouple to calculate temperature (" +
+        "°C)");
             this.j1TextBox.TextChanged += new System.EventHandler(this.temc1TextBox_TextChanged);
             // 
             // label7
@@ -230,6 +241,8 @@
             this.n1TextBox.Size = new System.Drawing.Size(172, 38);
             this.n1TextBox.TabIndex = 15;
             this.n1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.n1TextBox, "Enter seebeck effect value (mV) for this\r\nthermocouple to calculate temperature (" +
+        "°C)");
             this.n1TextBox.TextChanged += new System.EventHandler(this.temc1TextBox_TextChanged);
             // 
             // label8
@@ -250,6 +263,8 @@
             this.r1TextBox.Size = new System.Drawing.Size(172, 38);
             this.r1TextBox.TabIndex = 16;
             this.r1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.r1TextBox, "Enter seebeck effect value (mV) for this\r\nthermocouple to calculate temperature (" +
+        "°C)");
             this.r1TextBox.TextChanged += new System.EventHandler(this.temc1TextBox_TextChanged);
             // 
             // label9
@@ -270,6 +285,8 @@
             this.s1TextBox.Size = new System.Drawing.Size(172, 38);
             this.s1TextBox.TabIndex = 17;
             this.s1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.s1TextBox, "Enter seebeck effect value (mV) for this\r\nthermocouple to calculate temperature (" +
+        "°C)");
             this.s1TextBox.TextChanged += new System.EventHandler(this.temc1TextBox_TextChanged);
             // 
             // label10
@@ -290,6 +307,8 @@
             this.t1TextBox.Size = new System.Drawing.Size(172, 38);
             this.t1TextBox.TabIndex = 18;
             this.t1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.t1TextBox, "Enter seebeck effect value (mV) for this\r\nthermocouple to calculate temperature (" +
+        "°C)");
             this.t1TextBox.TextChanged += new System.EventHandler(this.temc1TextBox_TextChanged);
             // 
             // tabControl1
@@ -347,6 +366,8 @@
             this.temp1TextBox.TabIndex = 10;
             this.temp1TextBox.Text = global::TC.Properties.Settings.Default.TcTemp;
             this.temp1TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.temp1TextBox, "Enter temperature value (°C) to calculate\r\nseebeck effect (mV) for all thermocoup" +
+        "les");
             this.temp1TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp1TextBox_TextChanged);
             // 
             // tabPage4
@@ -389,6 +410,8 @@
             this.temc2TextBox.TabIndex = 132;
             this.temc2TextBox.Text = global::TC.Properties.Settings.Default.Temc;
             this.temc2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.temc2TextBox, "Enter seebeck effect value (mV) to calculate\r\ntemperature (°C) for all thermocoup" +
+        "les");
             this.temc2TextBox.TextChanged += new System.EventHandler(this.temc2TextBox_TextChanged);
             // 
             // t2TextBox
@@ -400,6 +423,8 @@
             this.t2TextBox.Size = new System.Drawing.Size(144, 38);
             this.t2TextBox.TabIndex = 112;
             this.t2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.t2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
+        "mV)");
             this.t2TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp2TextBox_TextChanged);
             // 
             // s2TextBox
@@ -411,6 +436,8 @@
             this.s2TextBox.Size = new System.Drawing.Size(144, 38);
             this.s2TextBox.TabIndex = 111;
             this.s2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.s2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
+        "mV)");
             this.s2TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp2TextBox_TextChanged);
             // 
             // r2TextBox
@@ -422,6 +449,8 @@
             this.r2TextBox.Size = new System.Drawing.Size(144, 38);
             this.r2TextBox.TabIndex = 110;
             this.r2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.r2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
+        "mV)");
             this.r2TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp2TextBox_TextChanged);
             // 
             // n2TextBox
@@ -433,6 +462,8 @@
             this.n2TextBox.Size = new System.Drawing.Size(144, 38);
             this.n2TextBox.TabIndex = 109;
             this.n2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.n2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
+        "mV)");
             this.n2TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp2TextBox_TextChanged);
             // 
             // j2TextBox
@@ -444,6 +475,8 @@
             this.j2TextBox.Size = new System.Drawing.Size(144, 38);
             this.j2TextBox.TabIndex = 108;
             this.j2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.j2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
+        "mV)");
             this.j2TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp2TextBox_TextChanged);
             // 
             // e2TextBox
@@ -455,6 +488,8 @@
             this.e2TextBox.Size = new System.Drawing.Size(144, 38);
             this.e2TextBox.TabIndex = 107;
             this.e2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.e2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
+        "mV)");
             this.e2TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp2TextBox_TextChanged);
             // 
             // b2TextBox
@@ -466,6 +501,8 @@
             this.b2TextBox.Size = new System.Drawing.Size(144, 38);
             this.b2TextBox.TabIndex = 106;
             this.b2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.b2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
+        "mV)");
             this.b2TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp2TextBox_TextChanged);
             // 
             // label20
@@ -496,6 +533,8 @@
             this.k2TextBox.Size = new System.Drawing.Size(144, 38);
             this.k2TextBox.TabIndex = 105;
             this.k2TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.k2TextBox, "Enter temperature value (°C) for this\r\nthermocouple to calculate seebeck effect (" +
+        "mV)");
             this.k2TextBox.TextChanged += new System.EventHandler(this.thermocoupleTemp2TextBox_TextChanged);
             // 
             // label22
@@ -620,6 +659,7 @@
             this.ni3TextBox.Size = new System.Drawing.Size(172, 38);
             this.ni3TextBox.TabIndex = 17;
             this.ni3TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.ni3TextBox, "Enter resistance (Ohm) to calculate\r\ntemperature (°C) for this RTD");
             this.ni3TextBox.TextChanged += new System.EventHandler(this.r3TextBox_TextChanged);
             // 
             // label17
@@ -669,6 +709,7 @@
             this.cu23TextBox.Size = new System.Drawing.Size(172, 38);
             this.cu23TextBox.TabIndex = 16;
             this.cu23TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.cu23TextBox, "Enter resistance (Ohm) to calculate\r\ntemperature (°C) for this RTD");
             this.cu23TextBox.TextChanged += new System.EventHandler(this.r3TextBox_TextChanged);
             // 
             // cu13TextBox
@@ -679,6 +720,7 @@
             this.cu13TextBox.Size = new System.Drawing.Size(172, 38);
             this.cu13TextBox.TabIndex = 15;
             this.cu13TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.cu13TextBox, "Enter resistance (Ohm) to calculate\r\ntemperature (°C) for this RTD");
             this.cu13TextBox.TextChanged += new System.EventHandler(this.r3TextBox_TextChanged);
             // 
             // pt23TextBox
@@ -689,6 +731,7 @@
             this.pt23TextBox.Size = new System.Drawing.Size(172, 38);
             this.pt23TextBox.TabIndex = 14;
             this.pt23TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.pt23TextBox, "Enter resistance (Ohm) to calculate\r\ntemperature (°C) for this RTD");
             this.pt23TextBox.TextChanged += new System.EventHandler(this.r3TextBox_TextChanged);
             // 
             // label16
@@ -709,6 +752,7 @@
             this.pt13TextBox.Size = new System.Drawing.Size(172, 38);
             this.pt13TextBox.TabIndex = 13;
             this.pt13TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.pt13TextBox, "Enter resistance (Ohm) to calculate\r\ntemperature (°C) for this RTD");
             this.pt13TextBox.TextChanged += new System.EventHandler(this.r3TextBox_TextChanged);
             // 
             // r03TextBox
@@ -721,6 +765,7 @@
             this.r03TextBox.TabIndex = 12;
             this.r03TextBox.Text = global::TC.Properties.Settings.Default.R0_1;
             this.r03TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.r03TextBox, "Nominal resistance (Ohm)\r\nof all RTD\'s");
             this.r03TextBox.TextChanged += new System.EventHandler(this.temp3TextBox_TextChanged);
             // 
             // label12
@@ -751,6 +796,7 @@
             this.temp3TextBox.TabIndex = 11;
             this.temp3TextBox.Text = global::TC.Properties.Settings.Default.RtdTemp;
             this.temp3TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.temp3TextBox, "Enter temperature value (°C) to calculate\r\nresistance (Ohm) for all RTD\'s");
             this.temp3TextBox.TextChanged += new System.EventHandler(this.temp3TextBox_TextChanged);
             // 
             // tabPage5
@@ -795,6 +841,7 @@
             this.ni4TextBox.Size = new System.Drawing.Size(172, 38);
             this.ni4TextBox.TabIndex = 107;
             this.ni4TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.ni4TextBox, "Enter temperature value (°C) to calculate\r\nresistance (Ohm) for this RTD");
             this.ni4TextBox.TextChanged += new System.EventHandler(this.temp4TextBox_TextChanged);
             // 
             // label31
@@ -844,6 +891,7 @@
             this.cu24TextBox.Size = new System.Drawing.Size(172, 38);
             this.cu24TextBox.TabIndex = 106;
             this.cu24TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.cu24TextBox, "Enter temperature value (°C) to calculate\r\nresistance (Ohm) for this RTD");
             this.cu24TextBox.TextChanged += new System.EventHandler(this.temp4TextBox_TextChanged);
             // 
             // cu14TextBox
@@ -854,6 +902,7 @@
             this.cu14TextBox.Size = new System.Drawing.Size(172, 38);
             this.cu14TextBox.TabIndex = 105;
             this.cu14TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.cu14TextBox, "Enter temperature value (°C) to calculate\r\nresistance (Ohm) for this RTD");
             this.cu14TextBox.TextChanged += new System.EventHandler(this.temp4TextBox_TextChanged);
             // 
             // pt24TextBox
@@ -864,6 +913,7 @@
             this.pt24TextBox.Size = new System.Drawing.Size(172, 38);
             this.pt24TextBox.TabIndex = 104;
             this.pt24TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.pt24TextBox, "Enter temperature value (°C) to calculate\r\nresistance (Ohm) for this RTD");
             this.pt24TextBox.TextChanged += new System.EventHandler(this.temp4TextBox_TextChanged);
             // 
             // label35
@@ -884,6 +934,7 @@
             this.pt14TextBox.Size = new System.Drawing.Size(172, 38);
             this.pt14TextBox.TabIndex = 103;
             this.pt14TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.pt14TextBox, "Enter temperature value (°C) to calculate\r\nresistance (Ohm) for this RTD");
             this.pt14TextBox.TextChanged += new System.EventHandler(this.temp4TextBox_TextChanged);
             // 
             // r04TextBox
@@ -896,6 +947,7 @@
             this.r04TextBox.TabIndex = 102;
             this.r04TextBox.Text = global::TC.Properties.Settings.Default.R0_2;
             this.r04TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.r04TextBox, "Nominal resistance (Ohm)\r\nof all RTD\'s");
             this.r04TextBox.TextChanged += new System.EventHandler(this.r4TextBox_TextChanged);
             // 
             // label36
@@ -926,11 +978,13 @@
             this.res4TextBox.TabIndex = 101;
             this.res4TextBox.Text = global::TC.Properties.Settings.Default.RtdResistance;
             this.res4TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip.SetToolTip(this.res4TextBox, "Enter resistance (Ohm) to calculate\r\ntemperature (°C) for all RTD\'s");
             this.res4TextBox.TextChanged += new System.EventHandler(this.r4TextBox_TextChanged);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.linkLabel1);
+            this.tabPage3.Controls.Add(this.versionLabel);
             this.tabPage3.Controls.Add(this.pictureBox2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -939,24 +993,39 @@
             this.tabPage3.Text = "About";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 29);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(129, 13);
-            this.label19.TabIndex = 100;
-            this.label19.Text = "We are working hard on it";
-            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::TC.Properties.Resources.image;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 45);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(2, 14);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(383, 262);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.Size = new System.Drawing.Size(383, 130);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            // 
+            // versionLabel
+            // 
+            this.versionLabel.AutoSize = true;
+            this.versionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.versionLabel.Location = new System.Drawing.Point(8, 352);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(75, 24);
+            this.versionLabel.TabIndex = 1;
+            this.versionLabel.Text = "Version";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkLabel1.Location = new System.Drawing.Point(8, 328);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(110, 24);
+            this.linkLabel1.TabIndex = 3;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "RPC Radics";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // MainForm
             // 
@@ -1028,7 +1097,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox temp1TextBox;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox temc2TextBox;
@@ -1066,6 +1134,9 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox res4TextBox;
+        private System.Windows.Forms.Label versionLabel;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

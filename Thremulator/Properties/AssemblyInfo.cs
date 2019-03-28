@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
 [assembly: AssemblyTitle("Thermulator")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Converter for thermocouples (type B, E, J, K, N, R, S, T) from voltage to themperature (deg C) and back. And converter for thermistor (type Ni, Cu, Pt) from resistance to themperature (deg C) and back")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TC")]
-[assembly: AssemblyCopyright("Yakhontov Aleksandr yakhontov@gmail.com")]
+[assembly: AssemblyCompany("RPC Radics")]
+[assembly: AssemblyProduct("Thermulator")]
+[assembly: AssemblyCopyright("RPC Radics, LLC, Yakhontov Aleksandr yakhontov@gmail.com")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номер сборки и номер редакции по умолчанию.
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.4.0.0")]
-[assembly: AssemblyFileVersion("0.4.0.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
